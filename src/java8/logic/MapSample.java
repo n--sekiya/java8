@@ -1,6 +1,6 @@
-package logic;
+package java8.logic;
 
-import common.Const;
+import java8.Const;
 
 /**
  * mapのサンプルクラス

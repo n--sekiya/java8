@@ -1,16 +1,13 @@
-package java8;
+package java8.logic;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-
-import model.MobileSuitModel;
-import model.PilotModel;
-import common.Const;
+import java8.Const;
+import java8.model.MobileSuitModel;
 
 
 /**

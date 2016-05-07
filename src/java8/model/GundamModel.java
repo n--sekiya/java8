@@ -1,4 +1,4 @@
-package model;
+package java8.model;
 
 public class GundamModel {
 	/** タイトル */
