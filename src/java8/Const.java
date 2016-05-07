@@ -1,15 +1,13 @@
-package common;
+package java8;
 
 import java.nio.charset.Charset;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.StringJoiner;
-
-import model.GundamModel;
-import model.MobileSuitModel;
-import model.PilotModel;
+import java8.model.GundamModel;
+import java8.model.MobileSuitModel;
+import java8.model.PilotModel;
 
 /**
  * 定数クラス

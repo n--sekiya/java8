@@ -1,4 +1,4 @@
-package logic;
+package java8.logic;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -7,8 +7,7 @@ import java.io.FileReader;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.util.stream.Stream;
-
-import common.Const;
+import java8.Const;
 
 /**
  * try-with-resourcesのサンプルクラス
