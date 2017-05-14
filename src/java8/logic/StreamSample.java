@@ -2,10 +2,12 @@ package java8.logic;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.function.Function;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
 import java8.Const;
 import java8.model.MobileSuitModel;
 
@@ -21,26 +23,42 @@ public class StreamSample {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		System.out.println("[sample1]--------------------------------------");
-		sample1();
-		System.out.println("[sample2]--------------------------------------");
-		sample2();
-		System.out.println("[sample3]--------------------------------------");
-		sample3();
-		System.out.println("[sample4]--------------------------------------");
-		sample4();
-		System.out.println("[sample5]--------------------------------------");
-		sample5();
-		System.out.println("[sample6]--------------------------------------");
-		sample6();
-		System.out.println("[sample7]--------------------------------------");
-		sample7();
-		System.out.println("[sample8]--------------------------------------");
-		sample8();
-		System.out.println("[sample9]--------------------------------------");
-		sample9();
-		System.out.println("[sample10]--------------------------------------");
-		sample10();
+		
+		final int value = 7;
+		System.out.println("---START---");
+		switch(value) {
+			case 1:
+				sample1();
+				break;
+			case 2:
+				sample2();
+				break;
+			case 3:
+				sample3();
+				break;
+			case 4:
+				sample4();
+				break;
+			case 5:
+				sample5();
+				break;
+			case 6:
+				sample6();
+				break;
+			case 7:
+				sample7();
+				break;
+			case 8:
+				sample8();
+				break;
+			case 9:
+				sample9();
+				break;
+			case 10:
+				sample10();
+				break;
+		}
+		System.out.println("---END---");
 	}
 
 	/**
