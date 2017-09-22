@@ -5,13 +5,21 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import junit.framework.TestCase;
+import mockit.integration.junit4.JMockit;
 
 public class AbstractBaseTest  extends TestCase {
 
 	@Test
 	public void testMain1() {
-//		AbstractBase base = new AbstractBaseTest();
-//		base.main1
+		
+//		JMockit.class
+		
+//		AbstractBase action = mock(AbstractBase.class, Mockito.CALLS_REAL_METHODS);
+//		AbstractBase action = mock(AbstractBase.class);
+
+		
+//		AbstractBase base = new AbstractBase();
+//		AbstractBase.main1();
 //		main1();
 	}
 

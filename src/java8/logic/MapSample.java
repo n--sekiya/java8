@@ -21,4 +21,9 @@ public class MapSample {
 		Const.GUMDAM_W.MAP.forEach((key, value) -> System.out.println(key + value));
 	}
 
+	public  int getInt() {
+		return 1;
+	}
+	
+	
 }
