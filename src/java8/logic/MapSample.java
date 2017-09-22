@@ -24,6 +24,10 @@ public class MapSample {
 	public  int getInt() {
 		return 1;
 	}
+
+	private String getHogehoge() {
+		return "Hello World";
+	}
 	
 	
 }
