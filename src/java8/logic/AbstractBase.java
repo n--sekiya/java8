@@ -6,7 +6,7 @@ import java8.Const;
  * mapのサンプルクラス
  * @author n_sekiya
  */
-abstract class AbstractBase {
+public abstract class AbstractBase {
 
 	
 	public String main1() {

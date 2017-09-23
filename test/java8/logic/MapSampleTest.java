@@ -74,5 +74,4 @@ public class MapSampleTest extends TestCase {
 		};
 		System.out.println(sample.main1());
 	}
-	
 }
