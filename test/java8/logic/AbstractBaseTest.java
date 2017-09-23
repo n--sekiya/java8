@@ -5,12 +5,21 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import junit.framework.TestCase;
+import mockit.Mocked;
+import mockit.NonStrictExpectations;
 import mockit.integration.junit4.JMockit;
 
 public class AbstractBaseTest  extends TestCase {
 
+	
 	@Test
 	public void testMain1() {
+		
+//		 new NonStrictExpectations(AbstractBase.class) {{
+//		　　　　　Bar.hoge();　　　//1つ目のメソッド
+//		　　　　　result = 1;
+//		　　　　　Bar.hogehoge();　//2つ目のメソッド
+//	　　　}};
 		
 //		JMockit.class
 		

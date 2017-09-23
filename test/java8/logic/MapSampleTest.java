@@ -8,17 +8,18 @@ import org.junit.Test;
 import junit.framework.TestCase;
 import mockit.Mock;
 import mockit.MockUp;
+import mockit.Mocked;
+import mockit.NonStrictExpectations;
 
+public class MapSampleTest extends TestCase {
 
-public class MapSampleTest {
-
+	/**
+	 * publicメソッドの返り値をモック化したテストメソッド
+	 */
 	@Test
 	public void test() {
-		MapSample sample = new MapSample();
-//		sample.main(null);
-		
+		final MapSample sample = new MapSample();
 		System.out.println(sample.getInt());
-		
 		new MockUp<MapSample>() {
 		      @Mock(invocations = 1)
 		      public int getInt() {
@@ -28,7 +29,10 @@ public class MapSampleTest {
 	   System.out.println(sample.getInt());
 	}
 	
-	
+	/**
+	 * privateメソッドのテストメソッド
+	 * @throws Exception
+	 */
 	@Test
 	public void test2() throws Exception {
 		final MapSample sample = new MapSample();
@@ -40,10 +44,35 @@ public class MapSampleTest {
 		System.out.println(actual);
 	}
 	
-	
-	
-	
-	
-	
+	@Mocked
+	private AbstractBase _abstractBase;
+
+	/**
+	 * なぜか失敗する・・・
+	 * @throws Exception
+	 */
+	@Test(expected= IllegalStateException.class)
+	public void test3_1() throws Exception {
+		new NonStrictExpectations() {{
+	    	_abstractBase.main1();result = null;
+        }};
+		System.out.println(this._abstractBase.main1());
+	}
+
+	/**
+	 * abstractクラスのメソッドをモック化したテストメソッド
+	 * @throws Exception
+	 */
+	@Test
+	public void test3_2() throws Exception {
+		final MapSample sample = new MapSample();
+		new MockUp<AbstractBase>() {
+	      @Mock(invocations = 1)
+	      public String main1() {
+	        return "TEST MOCK";
+	      }
+		};
+		System.out.println(sample.main1());
+	}
 	
 }

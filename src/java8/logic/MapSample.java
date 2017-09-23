@@ -6,7 +6,7 @@ import java8.Const;
  * mapのサンプルクラス
  * @author n_sekiya
  */
-public class MapSample {
+public class MapSample extends AbstractBase {
 
 	/**
 	 * @param args
@@ -28,6 +28,5 @@ public class MapSample {
 	private String getHogehoge() {
 		return "Hello World";
 	}
-	
-	
+
 }

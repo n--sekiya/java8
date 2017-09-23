@@ -9,16 +9,22 @@ import java8.Const;
 abstract class AbstractBase {
 
 	
-	public void main1() {
-		System.out.println("public method");
+	public String main1() {
+		final String str = "public method";
+		System.out.println(str);
+		return str;
 	}
 	
-	protected void main2() {
-		System.out.println("protected method");
+	protected String main2() {
+		final String str = "protected method";
+		System.out.println(str);
+		return str;
 	}
 	
-	private void main3() {
-		System.out.println("private method");
+	private String main3() {
+		final String str = "private method";
+		System.out.println(str);
+		return str;
 	}
 	
 }
