@@ -15,7 +15,7 @@ import mockit.NonStrictExpectations;
 import mockit.integration.junit4.JMockit;
 import mockit.internal.mockups.MockInvocation;
 
-public class AbstractBaseTest  extends TestCase {
+public class AbstractBaseTest  extends AbstractBase {
 
 /*
 public static T newUninitializedInstance(Class<? extends T> classToInstantiate)
@@ -67,7 +67,7 @@ abstractクラスやinterfaceの場合、abstractメソッドは空のインス�
 
 	@Test
 	public void testMain2() {
-//		main2();
+		main2();
 	}
 
 	@Test
