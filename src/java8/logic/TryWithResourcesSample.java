@@ -20,11 +20,19 @@ public class TryWithResourcesSample {
 	 */
 	public static void main(String[] args) {
 		System.out.println("--------------------------------------");
-		sample1();
+		
+		String str = null;
+		if (str.length() == 0) {
+			return;
+		}
+		System.out.println();
+		
 		System.out.println("--------------------------------------");
-		sample2();
+//		sample1();
 		System.out.println("--------------------------------------");
-		sample3();
+//		sample2();
+		System.out.println("--------------------------------------");
+//		sample3();
 		System.out.println("--------------------------------------");
 	}
 
