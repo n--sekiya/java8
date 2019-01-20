@@ -1,8 +1,14 @@
 package java8.logic;
 
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.HashSet;
+import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
+import java.util.Set;
 import java.util.function.Function;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -10,6 +16,7 @@ import java.util.stream.Stream;
 
 import java8.Const;
 import java8.model.MobileSuitModel;
+import java8.model.PilotModel;
 
 
 /**
@@ -189,11 +196,32 @@ public class StreamSample {
 		}
 	}
 
-	private static void sample7() {
-
+	private static Map<Integer, Map<Integer, PilotModel>> sample7() {
+		List<PilotModel> list = new ArrayList();
+		return list.stream()
+//				.sorted(Comparator.comparing(PilotModel::getGender))
+				.collect(Collectors.groupingBy(PilotModel::getGender,
+						Collectors.toMap(PilotModel::getGender, model -> model)));
 	}
 
-	private static void sample8() {
+	private static void  sample8() {
+		List<PilotModel> list = new ArrayList();
+		
+		// LinkedHashSet<PilotModel>
+		list.stream().collect(Collectors.toCollection(LinkedHashSet::new));
+
+		// LinkedHashMap<String, PilotModel>
+		list.stream().collect(Collectors.toMap(
+				PilotModel::getName, model -> model,
+				(u, v) -> v, LinkedHashMap::new));
+		
+		List<Map<String, PilotModel>> s3 = list.stream().collect(
+				//
+				 Collectors.mapping(
+						 Collectors.toMap(PilotModel::getName, model -> model)
+						 , Collectors.toList())
+				//
+				);
 
 	}
 
